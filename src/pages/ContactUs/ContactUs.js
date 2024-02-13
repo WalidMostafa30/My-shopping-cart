@@ -6,7 +6,6 @@ import { useDispatch } from "react-redux";
 import { addToComments, removeFromComments } from "../../rtk/commentslice";
 import { motion } from "framer-motion";
 
-
 export default function ContactUs() {
   const [nameInput, setNameInput] = useState("");
   const [commentInput, setCommentInput] = useState("");
@@ -22,9 +21,11 @@ export default function ContactUs() {
       name: nameInput,
       comment: commentInput,
     };
-    dispatch(addToComments(post));
-    setNameInput("");
-    setCommentInput("");
+    if (nameInput.trim().length > 0 && commentInput.trim().length > 0) {
+      dispatch(addToComments(post));
+      setNameInput("");
+      setCommentInput("");
+    }
   };
 
   return (
