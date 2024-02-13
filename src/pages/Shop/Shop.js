@@ -96,7 +96,6 @@ export default function Shop() {
           }
           onClick={openCategoryHandle}
         >
-          <FontAwesomeIcon icon={faArrowUp} />
           Category
         </button>
       </div>

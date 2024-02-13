@@ -96,33 +96,10 @@
       gap: 20px;
       box-shadow: -3px 2px 6px 0px black;
 
-      @media (max-width: 768px) {
-        transform: rotate(-90deg) translateY(-60px);
-      }
-
-      svg {
-        margin-right: 10px;
-        transform: rotate(180deg);
-        path {
-          color: white;
-        }
-      }
-
       &:hover {
         background-color: white;
         color: var(--main-color);
         border: 2px solid var(--main-color);
-        svg {
-          path {
-            color: var(--main-color);
-          }
-        }
-      }
-
-      &.open {
-        svg {
-          transform: rotate(0);
-        }
       }
     }
   }
