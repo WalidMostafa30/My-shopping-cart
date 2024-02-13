@@ -91,8 +91,8 @@ export default function Shop() {
         <button
           className={
             openCategory
-              ? "Shop__category-btn my-btn open"
-              : "Shop__category-btn my-btn"
+              ? "Shop__category-btn open"
+              : "Shop__category-btn"
           }
           onClick={openCategoryHandle}
         >

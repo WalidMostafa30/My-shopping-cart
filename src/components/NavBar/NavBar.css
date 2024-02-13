@@ -120,7 +120,14 @@
       right: -10px;
       height: 28px;
       width: 28px;
+      border-radius: 50%;
       font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--main-color);
+      color: white;
+      font-weight: 600;
     }
   }
 

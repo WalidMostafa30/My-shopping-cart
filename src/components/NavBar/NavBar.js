@@ -73,7 +73,7 @@ export default function NavBar() {
             <div className="NavBar__icon " onClick={handleSideCart}>
               <FontAwesomeIcon icon={faCartShopping} />
               {cart.length > 0 && (
-                <span className="NavBar__icon-quantity my-circle-btn">
+                <span className="NavBar__icon-quantity">
                   {cart.length > 9 ? "+9" : cart.length}
                 </span>
               )}
