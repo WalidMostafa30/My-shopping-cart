@@ -1,0 +1,145 @@
+.Cart {
+  .Cart__container {
+    margin-bottom: 50px;
+  }
+
+  .Cart__details {
+    text-align: center;
+    border: 3px solid var(--main-color);
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .Cart__btn-clear {
+    margin-top: 15px;
+  }
+
+  .Cart__products {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--main-color);
+  }
+
+  .Cart__product {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--main-color);
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .Cart__product-img {
+    width: 200px;
+
+    @media (max-width: 992px) {
+      width: 150px;
+    }
+  }
+
+  .Cart__product-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      gap: 20px;
+      width: 50%;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .Cart__product-title {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .Cart__product-prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  .Cart__product-price {
+    color: var(--main-color);
+  }
+
+  .Cart__product-body {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      width: 50%;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  .Cart__product-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+
+    @media (max-width: 1200px) {
+      margin: 0;
+    }
+  }
+
+  .Cart__product-quantity-num {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 20px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .Cart__product-quantity-remove {
+    font-size: 16px;
+  }
+
+  .Cart__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    img {
+      width: 400px;
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+}

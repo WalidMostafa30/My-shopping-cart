@@ -1,0 +1,9 @@
+.Slider {
+  img {
+    height: 700px;
+
+    @media (max-width: 768px) {
+      height: 350px;
+    }
+  }
+}

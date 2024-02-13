@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ab8c776b.css",
+    "main.js": "/static/js/main.7e3be628.js",
+    "static/media/BG22.jpg": "/static/media/BG22.24eb6f511a6f7846de06.jpg",
+    "static/media/Add to Cart-cuate.png": "/static/media/Add to Cart-cuate.54411557de67ef6406cd.png",
+    "static/media/imgSlide3.jpg": "/static/media/imgSlide3.60e3adbe580c8e505922.jpg",
+    "static/media/imgSlide1.jpg": "/static/media/imgSlide1.a976be02f75c04272f00.jpg",
+    "static/media/imgSlide2.jpg": "/static/media/imgSlide2.c9556559b85526912184.jpg",
+    "index.html": "/index.html",
+    "main.ab8c776b.css.map": "/static/css/main.ab8c776b.css.map",
+    "main.7e3be628.js.map": "/static/js/main.7e3be628.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab8c776b.css",
+    "static/js/main.7e3be628.js"
+  ]
+}

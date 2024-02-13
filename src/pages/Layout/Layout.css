@@ -1,0 +1,41 @@
+.Layout {
+  height: calc(100vh - 80px);
+  background: url(../../Images/BG22.jpg) center center/cover no-repeat;
+
+  .Layout__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .Layout__welcome {
+    font-size: 32px;
+    color: white;
+    text-shadow: -3px 3px 5px black;
+  }
+
+  .Layout__title {
+    font-size: 150px;
+    color: white;
+    text-shadow: -9px 9px 10px black;
+
+    @media (max-width: 768px) {
+      font-size: 76px;
+    }
+  }
+
+  .Layout__btn {
+    background-color: white;
+    color: var(--main-color);
+    padding: 10px 30px;
+    font-size: 26px;
+    margin-top: 100px;
+
+    &:hover {
+      background-color: var(--main-color);
+      color: white;
+    }
+  }
+}
