@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import SideCart from "../sideCart/sideCart";
-// import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 
 export default function NavBar() {
@@ -18,10 +17,6 @@ export default function NavBar() {
   const handleNav = () => setShowNav(!showNav);
 
   const cart = useSelector((state) => state.cart);
-
-  // useEffect(() => {
-
-  // }, [DarkMode]);
 
   return (
     <>
@@ -75,10 +70,10 @@ export default function NavBar() {
           </div>
 
           <div className="NavBar__icons">
-            <div className="NavBar__icon" onClick={handleSideCart}>
+            <div className="NavBar__icon " onClick={handleSideCart}>
               <FontAwesomeIcon icon={faCartShopping} />
               {cart.length > 0 && (
-                <span className="NavBar__icon-quantity">
+                <span className="NavBar__icon-quantity my-circle-btn">
                   {cart.length > 9 ? "+9" : cart.length}
                 </span>
               )}
