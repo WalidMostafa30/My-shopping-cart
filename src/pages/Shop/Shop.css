@@ -93,9 +93,6 @@
       left: 100%;
       top: 50%;
       transform: rotate(-90deg) translateY(-60px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       gap: 20px;
       box-shadow: -3px 2px 6px 0px black;
 
@@ -104,6 +101,7 @@
       }
 
       svg {
+        margin-right: 10px;
         transform: rotate(180deg);
         path {
           color: white;
