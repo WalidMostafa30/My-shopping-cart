@@ -3,8 +3,6 @@ import "./Shop.css";
 import GlobalTitle from "../../components/GlobalTitle/GlobalTitle";
 import Product from "../../components/product/Product";
 import { useSelector } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export default function Shop() {
@@ -70,7 +68,7 @@ export default function Shop() {
               src={require("../../Images/Add to Cart-cuate.png")}
               alt="img"
             />
-            <h1>Cart Is Empty... Add Some Products</h1>
+            <h1>No Product To Show</h1>
           </div>
         )}
       </div>
@@ -91,8 +89,8 @@ export default function Shop() {
         <button
           className={
             openCategory
-              ? "Shop__category-btn open"
-              : "Shop__category-btn"
+              ? "Shop__category-btn my-btn open"
+              : "Shop__category-btn my-btn"
           }
           onClick={openCategoryHandle}
         >

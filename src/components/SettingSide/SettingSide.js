@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./SettingSide.css";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { setColor } from "../../rtk/colorSlice";
 import { setMode } from "../../rtk/darkModeSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function SettingSide() {
-  const [opencolors, setOpencolors] = useState(false);
+export default function SettingSide({ opensetting }) {
   const dispatch = useDispatch();
+
   const themeColor = useSelector((state) => state.color);
+
   // eslint-disable-next-line no-unused-vars
   const [colors, setColors] = useState([
     "#eeb013",
@@ -52,7 +52,7 @@ export default function SettingSide() {
   }, []);
 
   return (
-    <div className={opencolors ? "SettingSide open" : "SettingSide"}>
+    <div className={opensetting ? "SettingSide open" : "SettingSide"}>
       <div className="SettingSide__drakMode">
         <h5 className="SettingSide-title">Dark Mode</h5>
         <div
@@ -85,13 +85,6 @@ export default function SettingSide() {
             />
           );
         })}
-      </div>
-
-      <div
-        className="SettingSide__btn my-btn"
-        onClick={() => setOpencolors(!opencolors)}
-      >
-        <FontAwesomeIcon icon={faGear} />
       </div>
     </div>
   );

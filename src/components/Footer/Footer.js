@@ -9,12 +9,15 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
     <div className="Footer">
       <div className="Footer__container container">
-        <h1 className="Footer__Title">My Shop</h1>
+        <h1 className="Footer__Title">
+          My Shop <FontAwesomeIcon icon={faCartShopping} />
+        </h1>
         <div className="Footer__group">
           <div className="Footer__links">
             <h3 className="Footer__links-title">Pages</h3>

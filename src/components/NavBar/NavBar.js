@@ -3,12 +3,16 @@ import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import SideCart from "../sideCart/sideCart";
 import { motion } from "framer-motion";
+import SettingSide from "../SettingSide/SettingSide";
 
 export default function NavBar() {
   const [showSideCart, setShowSideCart] = useState(false);
+
+  const [opensetting, setOpensetting] = useState(false);
 
   const [showNav, setShowNav] = useState(false);
 
@@ -70,13 +74,20 @@ export default function NavBar() {
           </div>
 
           <div className="NavBar__icons">
-            <div className="NavBar__icon " onClick={handleSideCart}>
+            <div className="NavBar__icon" onClick={handleSideCart}>
               <FontAwesomeIcon icon={faCartShopping} />
               {cart.length > 0 && (
                 <span className="NavBar__icon-quantity">
                   {cart.length > 9 ? "+9" : cart.length}
                 </span>
               )}
+            </div>
+
+            <div
+              className="NavBar__icon"
+              onClick={() => setOpensetting(!opensetting)}
+            >
+              <FontAwesomeIcon icon={faGear} />
             </div>
             <div
               onClick={handleNav}
@@ -90,6 +101,7 @@ export default function NavBar() {
         </div>
       </motion.div>
       <SideCart showSideCart={showSideCart} handleSideCart={handleSideCart} />
+      <SettingSide opensetting={opensetting} />
     </>
   );
 }

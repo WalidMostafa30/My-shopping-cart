@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addToComments, removeFromComments } from "../../rtk/commentslice";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 export default function ContactUs() {
   const [nameInput, setNameInput] = useState("");
@@ -25,6 +26,8 @@ export default function ContactUs() {
       dispatch(addToComments(post));
       setNameInput("");
       setCommentInput("");
+    } else {
+      toast.error("Name and Comment is Require");
     }
   };
 
@@ -43,7 +46,6 @@ export default function ContactUs() {
             id="Name"
             placeholder="Enter Your Name.."
             maxLength={25}
-            required
             onChange={onchangename}
             value={nameInput}
           />
@@ -51,7 +53,6 @@ export default function ContactUs() {
           <textarea
             id="Comment"
             placeholder="Leave Your Comment.."
-            required
             onChange={onchangecomment}
             value={commentInput}
           />
